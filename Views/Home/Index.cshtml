@@ -30,6 +30,12 @@
             border: none;
             cursor: pointer;
         }
+
+        #phoneOptions {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
     </style>
 </head>
 <body>
@@ -41,11 +47,26 @@
                 <option value="iphone">iPhone</option>
                 <br />
             <option value="android">Android</option>
+                <br />
+                <option value="moto">moto</option>
+                <br />
             </select><br />
+            
+
 
 
             <label for="modelo">Modelo:</label>
-            <input type="text" id="modelo" name="modelo" required>
+            <div class="form-container">
+                <form id="myForm">
+                    <label for="modelo">modelo:</label>
+                    <select id="phoneOptions">
+                        <option value="6">6</option>
+                        <br />
+                        <option value="6s">6s</option>
+                        <br />
+                        <option value="moto">moto</option>
+                        <br />
+                    </select><br />
 
             <label for="cantidad">Cantidad:</label>
             <input type="text" id="cantidad" name="cantidad" required>
@@ -82,16 +103,7 @@
         });
     </script>
 </body> 
-<head>
 
-<title>Opciones de teléfono</title>
-</head>
-<body>
-    <h2>Selecciona tu tipo de teléfono:</h2>
-    <select id="phoneOptions">
-        <option value="iphone">iPhone</option>
-        <option value="android">Android</option>
-    </select>
 
     <script>
         // Obtener referencia al cuadro desplegable
@@ -103,5 +115,5 @@
             console.log("Seleccionaste: " + selectedOption);
         });
     </script>
-    </body>
+   
 
