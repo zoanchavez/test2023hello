@@ -37,7 +37,12 @@
         <h2>Solicitud de información</h2>
         <form id="myForm">
             <label for="arquitectura">Arquitectura:</label>
-            <input type="text" id="arquitectura" name="arquitectura" required>
+            <select id="phoneOptions">
+                <option value="iphone">iPhone</option>
+                <br />
+            <option value="android">Android</option>
+            </select><br />
+
 
             <label for="modelo">Modelo:</label>
             <input type="text" id="modelo" name="modelo" required>
@@ -45,6 +50,11 @@
             <label for="cantidad">Cantidad:</label>
             <input type="text" id="cantidad" name="cantidad" required>
 
+            
+
+            <label for="color">Color:</label>
+   
+            <input type="text" id="color" name="color" required>
             <input type="submit" value="Enviar">
         </form>
     </div>
@@ -71,6 +81,27 @@
             form.reset();
         });
     </script>
-</body>
+</body> 
+<head>
 
+<title>Opciones de teléfono</title>
+</head>
+<body>
+    <h2>Selecciona tu tipo de teléfono:</h2>
+    <select id="phoneOptions">
+        <option value="iphone">iPhone</option>
+        <option value="android">Android</option>
+    </select>
+
+    <script>
+        // Obtener referencia al cuadro desplegable
+        var select = document.getElementById("phoneOptions");
+
+        // Asignar evento change al cuadro desplegable
+        select.addEventListener("change", function () {
+            var selectedOption = select.options[select.selectedIndex].value;
+            console.log("Seleccionaste: " + selectedOption);
+        });
+    </script>
+    </body>
 
